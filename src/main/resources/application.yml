@@ -1,0 +1,23 @@
+logging:
+  level:
+    org:
+      springframework:
+        orm:
+          jpa: DEBUG
+
+spring:
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: none
+      jdbc:
+        time_zone: Asia/Seoul
+    show-sql: true      # SQL 쿼리 출력
+    properties:
+      hibernate:
+        format_sql: true  # SQL pretty print
+  datasource:
+    username: root
+    url : jdbc:mysql://localhost:3307/cat_api?rewriteBatchedStatements=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    password : example_password
