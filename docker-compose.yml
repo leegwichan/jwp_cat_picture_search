@@ -6,11 +6,11 @@ services:
     container_name: cat-picture-db
     ports:
       - 3307:3306 # HOST:CONTAINER
+    volumes:
+      - ./mysql/initdb.d/:/docker-entrypoint-initdb.d/
     environment:
       MYSQL_ROOT_PASSWORD: example_password
-      MYSQL_DATABSE : cat_api
+      MYSQL_DATABASE : cat_api
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
-    volumes:
-      - /mysql/data:/var/lib/mysql

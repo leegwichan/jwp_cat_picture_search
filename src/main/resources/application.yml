@@ -4,6 +4,9 @@ logging:
       springframework:
         orm:
           jpa: DEBUG
+    com:
+      example:
+        feignclient: DEBUG
 
 spring:
   jpa:
@@ -25,3 +28,9 @@ spring:
 openapi:
   cat:
     api-key : ${CAT_API_KEY}
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
