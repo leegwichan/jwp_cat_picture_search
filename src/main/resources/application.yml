@@ -21,3 +21,7 @@ spring:
     username: root
     url : jdbc:mysql://localhost:3307/cat_api?rewriteBatchedStatements=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     password : example_password
+
+openapi:
+  cat:
+    api-key : ${CAT_API_KEY}
